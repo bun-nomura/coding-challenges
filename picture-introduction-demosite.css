@@ -1,0 +1,87 @@
+:root {
+  --small: 0.5rem;
+  --medium: 2rem;
+  --big: 3rem;
+  --btn-width: 10rem;
+  --img-width: 20rem;
+
+  --white: #fff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --info: #17a2b8;
+} 
+
+/* -----header----- */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 var(--medium);
+  color: var(--info);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* -----画像一覧、ボタン----- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.archives {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.archives img {
+  width: var(--img-width);
+  margin: var(--small);
+}
+
+button {
+  background-color: var(--info);
+  color: var(--white);
+  padding: var(--small) var(--medium);
+  margin: var(--small);
+  border: none;
+}
+
+/* -----footer----- */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--small);
+  color: var(--info);
+}
+
+footer img {
+  width: var(--medium);
+  padding: var(--small);
+}
+
+/* レスポンシブになるよう画面横幅が768px以上の時のCSSを記述しましょう */
+
+@media screen and (min-width: 768px) {
+  header {
+     justify-content: space-between;
+  }
+  .nav {
+     width: 50%;
+  }
+  footer {
+     flex-direction: row;
+     justify-content: center;
+  }
+
+
+}
